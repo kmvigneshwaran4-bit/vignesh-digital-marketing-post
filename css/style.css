@@ -1,0 +1,325 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: #172b50;
+  line-height: 1.7;
+}
+
+.header {
+  background: #082d75;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 6%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  color: white;
+  font-size: 23px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.logo span {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.navbar {
+  display: flex;
+  gap: 25px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #ffcc00;
+}
+
+.menu-btn {
+  display: none;
+  color: white;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.hero {
+  background: linear-gradient(135deg, #eaf3ff, #ffffff);
+  text-align: center;
+  padding-bottom: 65px;
+}
+
+.main-banner {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-content {
+  max-width: 900px;
+  margin: 45px auto 0;
+  padding: 0 20px;
+}
+
+.tagline {
+  color: #e6a900;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.hero h1 {
+  font-size: 43px;
+  line-height: 1.2;
+  color: #082d75;
+  margin: 15px 0;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.primary-btn,
+.secondary-btn {
+  display: inline-block;
+  padding: 13px 27px;
+  margin: 8px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.primary-btn {
+  background: #ffca05;
+  color: #082d75;
+}
+
+.primary-btn:hover {
+  background: #e9ae00;
+  transform: translateY(-3px);
+}
+
+.secondary-btn {
+  background: #082d75;
+  color: white;
+}
+
+.secondary-btn:hover {
+  background: #0756b8;
+}
+
+.section {
+  padding: 75px 8%;
+  text-align: center;
+  max-width: 1250px;
+  margin: auto;
+}
+
+.section h2 {
+  font-size: 34px;
+  color: #082d75;
+  margin: 10px 0 20px;
+}
+
+.section-label {
+  color: #e3a800;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.section-description {
+  margin-bottom: 30px;
+}
+
+.services-section {
+  max-width: none;
+  background: #f3f7ff;
+}
+
+.service-grid {
+  max-width: 1200px;
+  margin: 35px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.service-card {
+  background: white;
+  padding: 30px 22px;
+  border-radius: 15px;
+  border-bottom: 4px solid #ffca05;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+  transition: 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 10px 25px rgba(8,45,117,0.13);
+}
+
+.service-icon {
+  font-size: 38px;
+  margin-bottom: 12px;
+}
+
+.service-card h3 {
+  color: #082d75;
+  margin-bottom: 12px;
+}
+
+.why-section {
+  background: white;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.benefit {
+  padding: 25px;
+  background: #eef5ff;
+  border-radius: 12px;
+}
+
+.benefit h3 {
+  color: #082d75;
+  margin-bottom: 10px;
+}
+
+.contact-section {
+  background: #f3f7ff;
+  max-width: none;
+}
+
+.contact-details {
+  max-width: 650px;
+  margin: 30px auto;
+  text-align: left;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.contact-details p {
+  margin: 12px 0;
+  overflow-wrap: anywhere;
+}
+
+.contact-details a {
+  color: #0756b8;
+  text-decoration: none;
+}
+
+.contact-details a:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  background: #08245b;
+  color: white;
+  text-align: center;
+  padding: 35px 15px;
+}
+
+.footer h3 {
+  color: #ffca05;
+  margin-bottom: 10px;
+}
+
+.footer p {
+  margin: 8px;
+  font-size: 14px;
+}
+
+@media (max-width: 850px) {
+  .navbar {
+    gap: 13px;
+  }
+
+  .service-grid,
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 650px) {
+  .header {
+    flex-wrap: wrap;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .navbar {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    padding: 20px 0 5px;
+    gap: 15px;
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+
+  .hero-content {
+    margin-top: 25px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .section {
+    padding: 50px 6%;
+  }
+
+  .section h2 {
+    font-size: 27px;
+  }
+
+  .service-grid,
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-details {
+    padding: 18px;
+  }
+}
