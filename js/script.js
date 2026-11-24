@@ -2,6 +2,7 @@
 const menuBtn = document.getElementById("menuBtn");
 const navbar = document.getElementById("navbar");
 
+// Mobile navigation menu
 if (menuBtn && navbar) {
   menuBtn.addEventListener("click", function () {
     navbar.classList.toggle("active");
@@ -13,6 +14,7 @@ if (menuBtn && navbar) {
   });
 }
 
+// Close menu after selecting a link
 if (navbar) {
   const navLinks = navbar.querySelectorAll("a");
 
@@ -28,6 +30,7 @@ if (navbar) {
   });
 }
 
+// Automatic copyright year
 const yearElement = document.getElementById("year");
 
 if (yearElement) {
